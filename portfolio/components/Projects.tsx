@@ -4,50 +4,93 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    name: "CI/CD Pipeline with GitHub Actions",
+    name: "LangChoice — End to End DevOps Project",
     description:
-      "Automated build, test, and deployment pipeline using GitHub Actions and Docker.",
-    icons: ["@icons/github.svg", "@icons/docker.svg", "@icons/bash.svg"],
-    github: "https://github.com/yourusername/github-actions-cicd",
-  },
-  {
-    name: "Kubernetes Cluster Setup",
-    description:
-      "Production-ready Kubernetes cluster with RBAC, Ingress, and monitoring stack.",
+      "LangChoice lets developers vote for their favorite programming language. The app is written in Next.js frontend + Go Gin backend + MongoDB database. Used Terraform to create infrastructure, Ansible for configuration management, Jenkins for pipeline, AWS for cloud services (key management, EKS cluster, EC2 instance).",
     icons: [
-      "@icons/kubernetes.svg",
-      "@icons/prometheus.svg",
-      "@icons/grafana.svg",
+      "@icons/helm.svg",
+      "@icons/docker.svg",
+      "@icons/jenkins.svg",
+      "@icons/ansible.svg",
+      "@icons/terraform.svg",
+      "@icons/argocd.svg",
+      "@icons/aws.svg",
+      "@icons/eks.svg",
+      "@icons/ec2.svg",
+      "@icons/keymanagement.svg",
+      "@icons/python.svg",
+      "@icons/nextjs.svg",
+      "@icons/mongodb.svg",
     ],
-    github: "https://github.com/yourusername/k8s-cluster-setup",
+    github: "https://github.com/iamridoydey/langchoice.git",
   },
   {
-    name: "Terraform AWS Infrastructure",
+    name: "VisitCounter App",
     description:
-      "Infrastructure as Code provisioning VPC, EC2, and RDS on AWS.",
-    icons: ["@icons/terraform.svg", "@icons/aws.svg", "@icons/linux.svg"],
-    github: "https://github.com/yourusername/aws-terraform-infra",
+      "VisitCounter is a serverless web application that tracks and displays the total number of visits to a website in real time. Built entirely on AWS serverless services — S3, CloudFront, Route 53, Lambda, and DynamoDB. This architecture is cost-effective, scalable, and requires minimal operational overhead.",
+    icons: [
+      "@icons/javascript.svg",
+      "@icons/aws.svg",
+      "@icons/s3.svg",
+      "@icons/route53.svg",
+      "@icons/lambda.svg",
+      "@icons/dynamodb.svg",
+      "@icons/cloudfront.svg",
+    ],
+    github: "https://github.com/iamridoydey/visitcounter-app.git",
   },
   {
-    name: "Azure DevOps Pipeline",
+    name: "Flask Notebook App — Three-Tier Application",
     description:
-      "Multi-stage pipeline deploying applications to Azure Kubernetes Service (AKS).",
-    icons: ["@icons/azure.svg", "@icons/kubernetes.svg", "@icons/bash.svg"],
-    github: "https://github.com/yourusername/azure-devops-pipeline",
+      "A three-tier web application built with Flask (Python) for the backend, React (TypeScript + Tailwind) for the frontend, and MySQL as the database. Fully containerized with local automation using Jenkins and Docker Compose, and deployed on Vercel.",
+    icons: [
+      "@icons/react.svg",
+      "@icons/typescript.svg",
+      "@icons/python.svg",
+      "@icons/mysql.svg",
+      "@icons/docker.svg",
+      "@icons/jenkins.svg",
+      "@icons/vercel.svg",
+    ],
+    github: "https://github.com/iamridoydey/flask-notebook-app.git",
   },
   {
-    name: "Monitoring Stack",
+    name: "Terraform & Ansible Automation",
     description:
-      "Observability with Prometheus metrics and Grafana dashboards for Kubernetes workloads.",
-    icons: ["@icons/prometheus.svg", "@icons/grafana.svg", "@icons/docker.svg"],
-    github: "https://github.com/yourusername/k8s-monitoring-stack",
+      "A collection of infrastructure automation projects combining Terraform and Ansible — each project provisions cloud resources and configures them end to end.",
+    icons: [
+      "@icons/terraform.svg",
+      "@icons/ansible.svg",
+      "@icons/aws.svg",
+      "@icons/ec2.svg",
+    ],
+    github: "https://github.com/iamridoydey/tf-ansible-automation.git",
   },
   {
-    name: "Containerized Microservices",
+    name: "VMSS Mini App — Load Balancer + Virtual Machine Scale Set",
     description:
-      "Microservices containerized with Docker and deployed via Kubernetes manifests.",
-    icons: ["@icons/docker.svg", "@icons/kubernetes.svg", "@icons/github.svg"],
-    github: "https://github.com/yourusername/docker-microservices",
+      "A Virtual Machine Scale Set web application on Azure with VNet, subnet, network security group, load balancer, backend pool, and health probe. Built on Azure infrastructure with auto-scaling capabilities for high availability and performance.",
+    icons: [
+      "@icons/azure.svg",
+      "@icons/terraform.svg",
+      "@icons/azure-lb.svg",
+      "@icons/vmss.svg",
+    ],
+    github:
+      "https://github.com/iamridoydey/azure-vmss-apps/tree/main/vmss-mini-app",
+  },
+  {
+    name: "Sample App — Load Balancer + Auto Scaling Group",
+    description:
+      "An autoscaling web application on AWS with launch template, VPC, route tables, subnets, internet gateway, security group, load balancer, target group, and Auto Scaling Group. Built with Terraform for high availability and performance.",
+    icons: [
+      "@icons/aws.svg",
+      "@icons/terraform.svg",
+      "@icons/autoscaling.svg",
+      "@icons/loadbalancer.svg",
+    ],
+    github:
+      "https://github.com/iamridoydey/aws-autoscaling-apps/tree/main/asg-sample-app",
   },
 ];
 
@@ -69,7 +112,7 @@ export default function Projects() {
             >
               {/* Project Info */}
               <div>
-                <h3 className="tagline-font font-semibold text-xl sm:text-2xl mb-2 sm:mb-3">
+                <h3 className="tagline-font font-light text-xl sm:text-2xl mb-2 sm:mb-3">
                   {project.name}
                 </h3>
                 <p className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 md:mb-8 leading-relaxed">
